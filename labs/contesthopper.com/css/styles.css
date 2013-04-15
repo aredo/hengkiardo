@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html,
+body {
+	font-family: 'Merriweather', Futura, "Trebuchet MS", Arial, sans-serif;
+	color: #fff;
+	height:100%;	
+}
+
+#main{
+	margin: 5px auto 0;
+	height:100%; /* IE6: treaded as min-height */
+  min-height:100%; /* real browsers */
+  height:auto !important; /* real browsers */
+}
+
+#logo {
+	background: transparent url(../img/logo-grasshopper.png) no-repeat 0 0;
+	margin: 10px auto;
+	width: 294px; 
+	height: 155px;
+}
+h2{
+	/* background: transparent url(../img/contest-hopper-black.png) no-repeat center center;*/
+	font-size: 45px;
+	letter-spacing: 1px;
+	line-height: normal;
+	font-family:Tahoma, Arial, Helvetica;
+	color: #000;
+	font-weight: lighter;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+	width: auto;
+}
+
+footer{
+	margin: 0 auto;
+	text-align: center
+}
+footer a{
+	font-size: 12px;
+	display: block;
+	padding: 5px 0;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	color: #111;
+}
+footer a.affiliate{
+	text-decoration: underline;
+}
+
+footer a .icon-heart{
+	display: inline-block;
+	width: 12px;
+	margin:0 3px 0 1px;
+	height: 12px;
+	background: transparent url(../img/heart.png) no-repeat 0 0;
+}
+
+a {color: #000; text-decoration: underline;}
+p.strapline {clear: both; color: #121212; font-size: 24px; margin: 20px 10px; text-align: center; line-height: 36px;}
+
+#fruitmachine {margin: 30px auto; width: 1014px; padding: 0; overflow: hidden;}	
+
+.barrel {
+	position: relative; 
+	overflow: hidden; 
+	font-size: 21px; 
+	height: 50px;
+	background: #FFF; 
+	float: left; 
+	margin-right: 5px;
+	border: 1px solid #CCC;
+}
+
+.words {line-height: 50px; position: absolute; top: 0; left: 10px; color: #121212}
+#conjunction {
+	width: 2em;
+	border: 0; 
+	background: transparent; 
+	margin-right: 10px;
+}
+#conjunction .words{
+	color: #353535;
+}
+
+/*Set widths and animations for each barrel*/
+#adjective {
+	width: 9.5em;
+} 
+#adjective .words {
+	animation: moveadjective 1s steps(11, end) infinite;
+} 
+
+#noun1 {
+	width: 14em;
+}
+#noun1 .words {
+	animation: movenoun1 1s steps(11, end) infinite;
+}
+
+#noun2 {
+	width: 14.5em;
+}
+#noun2 .words {
+	animation: movenoun2 1s steps(11, end) infinite;
+}
+
+@keyframes fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;} 
+}
+@keyframes moveadjective {
+	0% {top: 0;}
+	100% {top: -550px;} 
+	/*11 adjectives @ 50px height*/
+}
+@keyframes movenoun1 {
+	0% {top: 0;}
+	100% {top: -550px;} 
+	/*11 noun1s @ 50px height*/
+}
+@keyframes movenoun2 {
+	0% {top: 0;}
+	100% {top: -550px;} 
+	/*11 noun2s @ 50px height*/
+}
+
+/* Rotate through logo too*/
+@keyframes movelogo {
+	0% {
+		background-position 0 0;
+	}
+	100% {
+		background-position: 0 -2170px;
+	} 
+}
+
+/* changes main background */
+@keyframes movemain {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position : 0 -5400px;
+	} 
+}
+
+/*Control*/
+#stopstart {
+	display: none;
+}
+#stopstart:checked~#fruitmachine .words, 
+#stopstart:checked~#logo,
+#stopstart:checked~#bgpage {
+	animation-play-state: paused;
+}
+
+.control {float: right; }
+
+.control label {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 5px 4px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 16px;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  border-radius: 4px;
+  *zoom: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+	width: 130px;
+	height: 42px;
+	line-height: 44px;
+	text-transform: uppercase;
+}
+
+.control label span.stop {display: inline;}	
+.control label span.start {display: none;}
+#stopstart:checked~#fruitmachine .control label span.stop {display: none;}
+#stopstart:checked~#fruitmachine .control label span.start {display: inline;}
+
+
+/* Style overrides for LaunchRock widget*/
+
+/* Container/overall styles */
+#launchrock{margin: 35px 0 0 0}
+#launchrock .lrdiscoverwidget, #launchrock .lrdiscoverwidget input, #launchrock .lrdiscoverwidget textarea, #launchrock .lrdiscoverwidget select {font-family: 'Merriweather', Futura, "Trebuchet MS", Arial, sans-serif;}
+#launchrock #lrcontent-I4T8PJ0O {width: 100%; margin: 0; padding: 0;}
+#launchrock .light-a .site {border: 0; background-color: transparent; border-radius: 0; box-shadow: none;}
+
+/* Sign-up form */
+#launchrock #inviteformI4T8PJ0O {margin: 0 auto; width: 300px;}
+#launchrock #inviteformI4T8PJ0O input[type="text"]{width: 278px; margin: 10px 0 5px 0; padding: 10px;}
+#launchrock .lrdiscoverwidget .inviteform .field {border-color: #CCC;}
+#launchrock .lrdiscoverwidget .inviteform .submit {border-color: #F59021; background-image: linear-gradient(top, #F9A851, #F59021);}
+#launchrock #submit-I4T8PJ0O {width: 300px; margin: 5px 0 40px 0;}
+
+/* Post sign-up content*/
+#launchrock .lrdiscoverwidget #invite-label-I4T8PJ0O span {font-size: 14px; line-height: 21px;}
+#launchrock .lrdiscoverwidget .like {text-align: center; margin: 20px auto;}
+#launchrock .lrdiscoverwidget .social-links ul {margin: 0 auto;}
+#launchrock .lrdiscoverwidget .site-desc{padding: 0 !important}
+#launchrock .lrdiscoverwidget .social-links li {border-color: #CCC;}
+#launchrock .lrdiscoverwidget .share-link label {float: none;}
+#launchrock .lrdiscoverwidget .site-tagline{display: none}
+#launchrock .lrdiscoverwidget .share-link .field-holder, #launchrock .lrdiscoverwidget .share-via-email .field-holder {background: #FFF;float: none; clear: both; width: auto; border-color: #CCC;}
+#launchrock .lrdiscoverwidget .share-link .field-holder input{text-align: center; border-color: #CCC;}
+#launchrock .lrdiscoverwidget .share-via-email {background: transparent; border: 0}
+#launchrock .lrdiscoverwidget .share-via-email label {color: #000; text-align:center;}
+#launchrock .lrdiscoverwidget .share-via-email label {color: #000;}
+#launchrock .lrdiscoverwidget .share-via-email .field-holder input {border-color: #CCC;}
+#launchrock .lrdiscoverwidget .share-via-email input.submit {border-color: #F59021; background-image: linear-gradient(top, #F9A851, #F59021); width: 100%;}
