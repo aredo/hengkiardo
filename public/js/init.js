@@ -14,7 +14,7 @@ var o = {
 		return Math.floor((Math.random()*(u-l+1))+l);
 	},
 	diagram: function(){
-		var r = Raphael('diagram', 700, 700),
+		var r = Raphael('diagram', 600, 600),
 			rad = 73,
 			defaultText = 'Skills',
 			speed = 250;
