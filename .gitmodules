@@ -1,0 +1,3 @@
+[submodule "public/project/axioo"]
+	path = public/project/axioo
+	url = ssh://git@bitbucket.org/hengkiardo/axioo.git

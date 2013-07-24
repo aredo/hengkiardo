@@ -10,6 +10,7 @@ lib-cov
 pids
 logs
 results
+public/project/*
 
 .DS_Store
 node_modules
