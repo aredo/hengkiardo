@@ -4,9 +4,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "connect": "~2.8.4",
+    "connect": "latest",
     "mime" : "*",
-    "gzippo": "0.2.0"
+    "gzippo": "latest"
   },
   "engines": {
     "node": "~0.10.x"

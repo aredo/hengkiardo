@@ -1,0 +1,7 @@
+resource/*
+revisi
+*.psd
+.git
+.DS_Store
+.gitignore
+New

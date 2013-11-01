@@ -1,0 +1,15 @@
+{
+  "blog": {
+    "name": "hengkiardo",
+    "url": "http://blog.hengkiardo.com/",
+    "tagline": "DESCRIPTION"
+  },
+  "articles": {
+    "urlformat": "{{slug}}",
+    "index": "index.html"
+  },
+  "build": {
+    "outputDir": "public/"
+  },
+  "partials": {}
+}
