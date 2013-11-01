@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]
     then
-        echo $ERRORSTRING;
+        echo "Error. Please make sure you've indicated correct parameters";
 elif [ $1 == "live" ]
     then
         if [[ -z $2 ]]
