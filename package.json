@@ -4,7 +4,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "connect": "latest",
+    "express": "latest",
     "mime" : "*",
     "gzippo": "latest"
   },
