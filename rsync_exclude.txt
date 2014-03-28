@@ -5,3 +5,4 @@ revisi
 .DS_Store
 .gitignore
 New
+public/blog
