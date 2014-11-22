@@ -4,6 +4,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "axm": "^0.2.24",
     "node-static": "^0.7.3"
   },
   "engines": {
