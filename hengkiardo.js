@@ -2,7 +2,7 @@ var static = require('node-static');
 //
 // Create a node-static server to serve the current directory
 //
-var file = new static.Server('./public', { cache: 86400, headers: {'X-Creator':'Follow @hengkiardo'} });
+var file = new static.Server('./public', { cache: 86400, serverInfo:'www.digitalocean.com/?refcode=731164068215', headers: {'X-Creator':'Follow @hengkiardo'} });
 var port = 4041;
 
 require('http').createServer(function (request, response) {
