@@ -13,12 +13,12 @@ require('http').createServer(function (request, response) {
     file.serve(request, response, function (err, res) {
         if (err) { // An error as occured
 
-            axm.notify(new Error('> Error serving " + request.url + " - " + err.message'));
+            axm.notify(new Error('> Error serving' + request.url + " - " + err.message));
 
             file.serveFile('/index.html', 301, {}, request, response);
 
         } else { // The file was served successfully
-            app.use(axm.expressErrorHandler());
+            axm.expressErrorHandler()
         }
     });
 }).listen(port);
